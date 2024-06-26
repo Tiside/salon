@@ -1,0 +1,951 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+  }
+
+/* Main-Colors */
+:root {
+    --main-color: #5F3A42;
+    --black-color: #000000;
+    --white-color: #EAEAEA;
+    --uslugi-color: #2D0C03;
+  }
+
+
+/* Main-Color */
+
+
+/* Body */
+body {
+  font-family: 'Quicksand', sans-serif;
+  color: var(--black-color);
+  background-color: #EAEAEA;
+}
+/* Body */
+
+
+/* Navigation */
+.navigation-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-right: 350px;
+}
+
+.navigation-list {
+    display: flex;
+    padding: 0;
+    margin: 0; /* Resets default margin */
+    list-style-type: none; /* Removes default list styling */
+    align-items: center; /* Centers items vertically */
+}
+
+.navigation-list a {
+    text-decoration: none;
+    color: #000; /* Set your preferred color */
+    padding: 12px 16px; /* Adjust spacing as needed */
+    position: relative;
+    display: inline-block;
+}
+
+.navigation-list a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: var(--main-color); /* Выберите цвет, который вам нравится */
+    left: 50%;
+    bottom: 10px;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.navigation-list a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.Main-name {
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: large;
+    padding: 0 12px; /* Adjust the spacing around the main name */
+}
+
+li{
+    list-style-type: none;
+    padding: 12px 12px;
+    color: gray;
+    font-weight: lighter;
+}
+
+.logo img{
+    height: 100px;
+    width: auto;
+}
+.logo{
+    text-align: left;
+    position: relative;
+    right: 15%;
+}
+/* Navigation */
+
+/* Header */
+header{
+    display: flex;
+    justify-content: flex-end; /* Выравниваем содержимое по правому краю */
+    align-items: center; /* Центрируем содержимое по вертикали */
+    background-image: url(../Img/AdobeStock_244559284.jpeg);
+    height: 60vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.content{
+    margin-right: 10%; /* Отступ справа, чтобы не прижимать содержимое вплотную к краю */
+    color: var(--white-color);
+    padding: 20px; /* Добавим паддинг для внутренних отступов */
+}
+.content p{
+    font-weight: lighter;
+    font-size: small;
+    position: relative;
+    top: 10px;
+    
+}
+.content h3{
+    font-weight: bold;
+    font-size: 40px;
+    color: var(--main-color);
+}
+/* Header */
+
+/* About us*/
+.about-us{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.about-content{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    
+}
+.about-text{
+    background-color: var(--main-color);
+    padding: 20px;
+    height: 500px;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.about-text h2{
+    color: var(--black-color);
+    font-weight: bold;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.about-text p{
+    width: 600px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    font-weight: 600px;
+    text-wrap: wrap;
+    color: var(--white-color);
+}
+.about-image img{
+    height: 500px;
+    
+}
+/* About us*/
+
+/* Services*/
+.services{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+.services-main{
+    text-align: center;
+}
+.services h2{
+    color: var(--uslugi-color);
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.services-contentainer{
+    display: flex;
+    grid-gap: 120px;
+}
+
+.services-content img{
+    height: 250px;
+    width: 260px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+.services-content h3{
+    color: var(--uslugi-color);
+    font-weight: 500;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-align: center;
+}
+.services-content p{
+    font-weight: 200;
+    color: gray;
+    width: 250px;
+    font-weight: 600px;
+    text-align: center;
+}
+
+.services .btn{
+    background-color: var(--main-color); /* Initial button color */
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 150px; /* Square shape */
+    height: 40px; /* Square shape */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    margin-top: 30px;
+}
+
+.services .btn:hover {
+    background-color: #8C6677; /* Color on hover */
+    transform: scale(1.05); /* Slightly larger */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+/* Services*/
+
+/* Salon Content*/
+.salon-gallery{
+    display: flex;
+    justify-content: center;
+   margin-bottom: 0;
+}
+.salon-back{
+    background-color: var(--main-color);
+    height: 800px;
+    width: 700px;
+    position: relative;
+    right: 30%;
+}
+
+.salon-container{
+    height: 1000px;
+}
+
+.salon-back img{
+    height: 550px;
+    width: auto;
+    position: relative;
+    right: 10%;
+    top: 6%;
+}
+
+.salon-circle{
+    background-color: var(--main-color);
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    bottom: 70%;
+    left: 70%;
+}
+
+.salon-content{
+    background-color: var(--white-color);
+    padding: 50px;
+    position: relative;
+    bottom: 60%;
+    left: 40%;
+}
+
+.salon-content h2{
+    font-weight: bolder;
+    font-size: 25px;
+    padding-bottom: 15px;
+    color: var(--main-color);
+}
+
+.salon-content p{
+    width: 400px;
+    font-weight: 600px;
+    text-align: left;
+}
+
+
+.salon-content .btn{
+    background-color: var(--main-color); /* Initial button color */
+    color: var(--white-color);
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 150px; /* Square shape */
+    height: 40px; /* Square shape */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    margin-top: 30px;
+}
+
+.salon-content .btn:hover {
+    background-color: #8C6677; /* Color on hover */
+    transform: scale(1.05); /* Slightly larger */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+/* Salon Content*/
+
+
+/* Opinions*/
+.opinions-container{
+    background-color: var(--main-color);
+    padding: 70px;
+}
+.opinions-main{
+    display: flex;
+    justify-content: center;
+}
+.opinions-content{
+    display: flex;
+    grid-gap: 120px;
+}
+
+.opinions{
+    background-color: var(--white-color);
+    color: var(--black-color);
+    padding: 20px 30px;
+}
+.opinions i{
+    font-size: 30px;
+}
+.bxs-quote-alt-right{
+    position: relative;
+    left: 80%;
+}
+
+.opinions h2{
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    padding-top: 40px;
+}
+#opinions-center{
+    padding: 50px;
+}
+
+.opinions p{
+    width: 200px;
+    font-weight: 600px;
+    text-align: left;
+}
+.blockquote::before {
+    content: "“";
+    color: var(--black-color);
+    font-size: 100px;
+    line-height: 1rem;
+    display: block;
+}
+/* Opinions*/
+
+
+/* Social Media*/
+.follow-main{
+    display: flex;
+    justify-content: space-between;
+}
+
+.follow-text h2{
+    font-weight: bolder;
+    font-size: 40px;
+    color: var(--main-color);
+    padding: 10px 20px;
+}
+.follow-icons i{
+    font-size: 60px;
+    padding: 2px 20px;
+}
+.follow-icons {
+   padding: 10px 10px;
+   margin-top: 20px;
+}
+.follow-icons a{
+    color: var(--black-color);
+}
+.follow-icons a:hover{
+    color: var(--main-color);
+}
+/* Social Media*/
+
+/* Contact*/
+.contact-container {
+    background-color: var(--black-color);
+    color: var(--white-color);
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* Центрируем контент по горизонтали */
+}
+
+
+.contact-main {
+    display: flex;
+    justify-content: space-evenly;
+    position: relative; /* Добавляем позиционирование для линии */
+    width: 80%; /* Ограничиваем ширину, чтобы не растягивалось на весь экран */
+}
+
+/* Добавляем белую вертикальную линию */
+.contact-main::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    border-left: 2px solid var(--white-color); /* Ширина и цвет линии */
+}
+
+.contact-form h2{
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+.contact-info h2{
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+.contact-form {
+    padding: 20px;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    background-color: var(--black-color);
+    border: 1px solid var(--white-color);
+    color: var(--white-color);
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--main-color);
+    outline: none;
+}
+
+
+
+
+.contact-form button {
+    background-color: var(--main-color);
+    border: none;
+    color: var(--white-color);
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #8C6677;
+    transform: translateY(-3px);
+}
+
+
+.contact-info {
+    padding: 100px 20px; /* Уменьшаем отступы для более компактного вида */
+}
+/* Contact*/
+
+/* Footer*/
+
+
+
+.footer-content{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.footer-logo img{
+        height: 100px;
+        width: auto;
+}
+.footer-navigation a {
+    text-decoration: none;
+    color: #000; /* Set your preferred color */
+    padding: 12px 16px; /* Adjust spacing as needed */
+}
+.footer-navigation a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #5F3A42; /* Или другой цвет на ваше усмотрение */
+    left: 50%;
+    bottom: 10px; /* Немного ниже текста */
+    transition: all 0.3s ease;
+}
+
+.footer-navigation a:hover {
+    color: #5F3A42; /* Изменение цвета текста при наведении */
+    transform: translateY(-2px); /* Небольшое перемещение вверх для эффекта "подъема" */
+}
+
+.footer-navigation a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.footer-main-nav h2 {
+    color: var(--main-color); /* Убедитесь, что у вас определена эта переменная цвета */
+    font-weight: bolder;
+    font-size: 25px;
+    margin-top: 35px;
+    padding: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Добавляем плавный переход для поднятия и тени */
+    cursor: pointer; /* Опционально, указывает, что элемент интерактивный */
+}
+
+.footer-main-nav h2:hover {
+    transform: translateY(-5px); /* Поднимаем на 5px вверх */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Добавляем тень снизу */
+}
+ .footer-navigation li{
+    list-style-type: none;
+    padding: 12px 12px;
+    color: gray;
+    font-weight: lighter;
+}
+
+.footer-navigation{
+    padding-top: 20px;
+    display: flex;
+    margin: 0; /* Resets default margin */
+    list-style-type: none; /* Removes default list styling */
+    align-items: center; /* Centers items vertically */
+    text-align: center;
+}
+footer hr{
+    width: 80%;
+}
+/* Footer*/
+
+
+/* Copyright*/
+.copyright{
+    display: flex;
+    justify-content: center;
+}
+/* Copyright*/
+
+.line{
+    width: 50%;
+    text-align: center;
+    position: relative;
+    left: 25%;
+    bottom: 10px;
+    border: 0.1px solid black;
+}
+
+
+/* MEDIA */
+
+/* Header */
+
+@media (min-width: 1200px) and (max-width: 1850px){
+    .navigation-bar{
+        display: none;
+    }
+.header{
+    width: auto;
+    background-attachment: unset;
+}
+}
+
+@media (min-width: 768px) and (max-width: 1200px){
+    .navigation-bar{
+        display: none;
+    }
+.header{
+    width: auto;
+    background-attachment: unset;
+}
+}
+
+@media (min-width: 401px) and (max-width: 768px){
+    .navigation-bar{
+        display: none;
+    }
+.header{
+    width: auto;
+    background-attachment: unset;
+}
+}
+
+@media (max-width: 400px){
+    .navigation-bar{
+        display: none;
+    }
+.header{
+    width: auto;
+    background-attachment: unset;
+}
+}
+/* Header */
+
+/* About Us */
+@media (min-width: 1200px) and (max-width: 1850px){
+    .about-text {
+        width: 100%;
+        height: auto;
+        padding: 20px 10px;
+    }
+    .about-image img{
+        height: auto;
+        
+    }
+    .about-text p{
+        width: 700px;
+        padding: 0 10px;
+        text-align: justify;
+        padding: 0 10px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1200px){
+    .about-content{
+        flex-direction: column;
+    }
+    .about-text {
+        width: 100%;
+        height: auto;
+        padding: 20px 10px;
+    }
+    .about-image img{
+        height: auto;
+        width: 100%;
+        
+    }
+    .about-text p{
+        width: auto;
+        padding: 0 10px;
+        text-align: justify;
+        left: 0;
+        padding: 0 10px;
+    }
+
+}
+
+@media (min-width: 401px) and (max-width: 768px){
+    .about-content{
+        flex-direction: column;
+    }
+    .about-text p{
+        width: auto;
+        padding: 0 10px;
+        text-align: justify;
+        left: 0;
+        padding: 0 10px;
+    }
+    .about-text {
+        width: 100%;
+        height: auto;
+        padding: 20px 10px;
+    }
+    .about-image img{
+        height: auto;
+        width: 100%;
+        
+    }
+    .about-text h2{
+        padding-top: 20px;
+    }
+}
+
+@media (max-width: 400px){
+    .about-content{
+        flex-direction: column;
+    }
+    .about-text p{
+        width: auto;
+        padding: 0 10px;
+        text-align: justify;
+        left: 0;
+        padding: 0 10px;
+    }
+    .about-text {
+        width: 100%;
+        height: auto;
+        padding: 20px 10px;
+    }
+    .about-image img{
+        height: auto;
+        width: 100%;
+        
+    }
+    .about-text h2{
+        padding-top: 20px;
+    }
+    }
+    /* About Us */
+
+
+    /* Services */
+    @media (min-width: 768px) and (max-width: 1200px){
+        .services-contentainer{
+            grid-gap: 10px;
+        }
+    }
+
+    @media (min-width: 401px) and (max-width: 768px){
+
+        .services-contentainer{
+            flex-direction: column;
+            grid-gap: 30px;
+        }
+        }
+
+    @media (max-width: 400px){
+        .services-contentainer{
+            flex-direction: column;
+            grid-gap: 30px;
+        }
+        
+        }
+            /* Services */
+
+    /* Salon */
+
+    @media (min-width: 768px) and (max-width: 1200px){
+        .salon-back{
+            right: 0;
+            width: 600px;
+        }
+        .salon-back img{
+            right: 5%;
+            height: 450px;
+        }
+        .salon-circle{
+            bottom: 70%;
+            left: 95%;
+            height: 120px;
+            width: 120px;
+        }
+        .salon-content{
+            width: 500px;
+            left: 30%;
+            padding: 40px;
+        }
+        .salon-content p{
+            width: 300px;
+        }
+    }
+
+    @media (min-width: 401px) and (max-width: 768px){
+        .salon-back{
+            height: 700px;
+            width: 250px;  
+            right: 10%;     
+        }
+        .salon-back img{
+            right: 10%;
+            height: 220px;
+            padding: 0 10px;
+        }
+        .salon-circle{
+            height: 80px;
+            width: 80px;
+            bottom: 50%;
+            left: 75%;
+        }
+        .salon-content{
+            bottom: 50%;
+            left: 10%;
+            padding: 20px;
+        }
+        .salon-content p{
+            width: 200px;
+        }   
+    }
+
+@media (max-width: 400px){
+    .salon-back{
+        height: 700px;
+        width: 250px;  
+        right: 10%;
+           
+    }
+    .salon-back img{
+        right: 10%;
+        height: 220px;
+        padding: 0 10px;
+    }
+    .salon-circle{
+        height: 80px;
+        width: 80px;
+        bottom: 50%;
+        left: 75%;
+    }
+    .salon-content{
+        bottom: 50%;
+        left: 10%;
+        padding: 20px;
+    }
+    .salon-content p{
+        width: 200px;
+    }   
+}
+    /* Salon */
+
+    /* Opinios */
+    @media (min-width: 768px) and (max-width: 1200px){
+
+        .opinions-content{
+            grid-gap: 10px;
+        }
+    }
+
+    @media (min-width: 401px) and (max-width: 768px){
+        .opinions-content{
+            flex-direction: column;
+            grid-gap: 30px;
+        }
+
+    }
+
+    @media (max-width: 400px){
+        .opinions-content{
+            flex-direction: column;
+            grid-gap: 30px;
+        }
+
+    }
+
+    /* Opinios */
+    @media (min-width: 768px) and (max-width: 1200px){
+        .contact-main::after {
+            
+            left: 55%;
+            
+        }
+    }
+
+
+            /* Contact */
+            @media (min-width: 401px) and (max-width: 768px){
+                .contact-main{
+                    flex-direction: column;
+                    
+                }
+                 .contact-main::after {
+                    border-left: none; /* Убираем вертикальную линию */
+                    border-top: 2px solid white; /* Добавляем горизонтальную линию */
+                    left: 0;
+                    top: 60%; /* Центрируем линию горизонтально */
+                    width: 100%; /* Указываем ширину линии */
+                    bottom: auto; /* Сброс необходим для корректного отображения */
+                  }
+               
+                }
+
+           @media (max-width: 400px){
+            .contact-main{
+                flex-direction: column;
+                
+            }
+             .contact-main::after {
+                border-left: none; /* Убираем вертикальную линию */
+                border-top: 2px solid white; /* Добавляем горизонтальную линию */
+                left: 0;
+                top: 60%; /* Центрируем линию горизонтально */
+                width: 100%; /* Указываем ширину линии */
+                bottom: auto; /* Сброс необходим для корректного отображения */
+              }
+           
+            }
+            /* Contact */
+
+    /* Footer */
+    @media (min-width: 401px) and (max-width: 768px){
+        .footer-content{
+            flex-direction: column;
+        }
+        .footer-main-nav h2{
+            text-align: center;
+        }
+        .footer-navigation li{
+            padding: 0px 12px;
+            text-align: center;
+           
+        }
+        .footer-navigation a{
+           
+            text-align: center;
+        }
+        .footer-navigation{
+            display: block;
+        }
+        footer hr{
+            margin-top: 10px;
+            width: auto;
+            text-align: center;
+        }
+    }
+
+    @media (max-width: 400px){
+    .footer-content{
+        flex-direction: column;
+    }
+    .footer-main-nav h2{
+        text-align: center;
+    }
+    .footer-navigation li{
+        padding: 0px 0px;
+        text-align: center;
+    }
+    .footer-navigation a{
+        padding: 0px 10px;
+        text-align: center;
+    }
+    footer hr{
+        margin-top: 10px;
+        width: auto;
+        text-align: center;
+    }
+}
+    /* Footer */
+
+            
+
+/* MEDIA */
